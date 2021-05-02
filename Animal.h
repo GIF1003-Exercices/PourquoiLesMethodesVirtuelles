@@ -13,7 +13,7 @@ public:
 
     explicit Animal(std::string) ;
     std::string getNom() const ;
-    virtual std::string crier() const ;
+    std::string crier() const ;  // ATTENTION: C'est cette ligne qui est la plus importante!!!!
 
 private:
     std::string nom ;

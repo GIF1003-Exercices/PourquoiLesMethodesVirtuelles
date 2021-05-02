@@ -19,7 +19,7 @@ int main() {
     std::cout << "Mon nom est: " << monChat.getNom() << ". Voici mon cri: " << monChat.crier() << std::endl  ;
 
     std::cout << "*** *** *** *** *** *** *** *** *** *** *** *** ***" << std::endl ;
-
+    // ATTENTION: Analysez attentivement ces trois initialisations
     Animal& fido = monChien ;
     Animal& noiraud = monChat ;
     Animal& zorgplouk = monAnimal ;
@@ -30,8 +30,8 @@ int main() {
     std::cout << "Mon nom est: " << zorgplouk.getNom() << ". Voici mon cri: " << zorgplouk.crier() << std::endl ;
     std::cout << "*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***" << std::endl ;
 
-
-    std::vector<Animal*> animaux {&monChien, &monChat, &monAnimal};
+    // ATTENTION: Analysez attentivement cette déclaration
+    std::vector<Animal*> animaux {&monAnimal, &monChien, &monChat};
 
     std::cout << "*** Nous allons maintenant appeler la méthode crier() sur un pointeur à Animal qui n'est pas connu d'avance ***" << std::endl ;
     std::cout << "Voici la liste des animaux disponibles.  Choisissez celui que vous voulez entendre" << std::endl ;
