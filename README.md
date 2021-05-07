@@ -147,6 +147,19 @@ a bien le comportement attendu.
 
 ## Récapitulation des classes abstraites et des méthodes virtuelles pures
 
+### Classes abstraites
+
+Les classes abstraites servent de modèle à d'autres classes.  Elles contiennent des méthodes virtuelles pures que leurs classes dérivées doivent absolument implanter.  En ce sens, une classe abstraite constitue un contrat ou un protocole imposé aux classes dérivées.
+
+### Méthodes virtuelles pures
+
+Une méthode virtuelle pure est déclarée avec la syntaxe suivante (ici les type int sont juste un exemple): 
+```
+virtual int CetteClasse::cetteMethode(int) = 0 ;
+```
+L'implantation de la méthode virtuelle pure est optionnelle dans la classe de base, mais elle est obligatoire dans toutes les classes dérivées.
+
+
 
 
 
