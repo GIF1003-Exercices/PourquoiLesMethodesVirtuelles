@@ -5,9 +5,21 @@ Cette activité comporte 6 étapes, l'ordre des étapes à réaliser est décrit
 
 ## Étape 1: Cloner le dépôt git et inclure le projet dans votre IDE
 
-Il s'agit d'un exécutable C++ standard.  Vous pouvez simplement copier tous les fichiers .h et .cpp dans un nouveau projet 
-de votre IDE préféré, il devrait compiler tel quel avec C++ 14.  Si vous n'utilisez pas CMake, n'incluez pas ou effacez
-le fichier CMakeLists.txt.
+Ce projet est prêt à être utilisé tel quel dans NetBeans 12.0
+
+- Ouvrir NetBeans
+- Menu Teams -> Git -> Clone
+- Saisissez l'adresse du présent dépôt: https://github.com/pascalcharp/PourquoiLesMethodesVirtuelles.git
+- Il n'est pas nécessaire de saisir de nom d'utilisateur ou de mot de passe: le dépôt est public
+- Choisir la branche distante "main" (c'est la seule!)
+- Il faut choisir ensuite à quelle destination le dépôt sera cloné
+  EXEMPLE: Si je choisis le dossier parent: /Users/pascal et le nom de clone: machin, mon nouveau projet
+  sera placé dans le dossier: /Users/pascal/machin
+- Choisir ensuite "Finish" puis choisir "Oui" lorsque NetBeans offrira d'ouvrir le projet.
+- Le projet est ouvert et utilisable immédiatement! 
+
+Il s'agit d'un exécutable C++ standard.  Si vous n'utilisez pas NetBeans, vous pouvez simplement copier tous les fichiers .h et .cpp dans un nouveau projet 
+de votre IDE préféré, il devrait compiler tel quel avec C++ 14.  Si vous utilisez CMake, un CMakeLists.txt est inclus.
 
 ## Étape 2: Analyse du projet
 
