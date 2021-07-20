@@ -18,7 +18,7 @@ int main() {
     std::cout << "Mon nom est: " << monChien.getNom() << ". Voici mon cri: " << monChien.crier() << std::endl ;
     std::cout << "Mon nom est: " << monChat.getNom() << ". Voici mon cri: " << monChat.crier() << std::endl  ;
 
-    std::cout << "*** *** *** *** *** *** *** *** *** *** *** *** ***" << std::endl ;
+    std::cout << "*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***" << std::endl ;
     // ATTENTION: Analysez attentivement ces trois initialisations
     Animal& fido = monChien ;
     Animal& noiraud = monChat ;
@@ -46,6 +46,16 @@ int main() {
     return 0;
 }
 
+/**
+ * Valide la saisie d'un nombre entier positif inférieur à une limite
+ * Donc on aura: 0 <= saisie < limite
+ * Une saisie comme "abcd" ou "2.345" est ignorée et l'utilisateur est invité
+ * à recommencer.
+ * @param limite borne supérieure des saisies acceptées
+ * @return l'entier saisi
+ * @pre limite est un nombre strictement positif
+ * @except logic_error si limite est un nombre nul ou négatif
+ */
 int saisirUnEntierPositifAvecLimite(int limite) {
     if (limite <= 0) throw std::invalid_argument("Limite négative dans saisirUnEntierPositifAvecLimite") ;
 
