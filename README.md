@@ -107,15 +107,15 @@ virtuelles.
 
 Pourquoi voudrait-on accéder à nos instances de manière générique?  N'est-il pas plus simple d'utiliser des objets statiques? 
 Le problème est que les programme dont toutes les conditions d'exécution sont connues d'avance sont rares...  La grande 
-majorité des logiciels doivent interagir avec un utilisateur, lire des données d'un fichier, accéder à un réseau pour lire
-des messages: on ne sait donc pas d'avance le type d'objet qui devra être manipulé!  Dans ces conditions les méthodes virtuelles
-permettent de manipuler des catégories génériques d'objet sans qu'on sache d'avance à quelle classe ils appartiennent.
+majorité des logiciels doit: interagir avec un utilisateur, lire des données d'un fichier, ou encore accéder à un réseau pour lire
+des messages. Par conséquent, on ne sait donc pas d'avance le type d'objet qui devra être manipulé!  Dans ces conditions les méthodes virtuelles
+permettent de manipuler des catégories génériques d'objet sans qu'on sache a priori à quelle classe ils appartiennent.
 
 ## Étape 6 Réalisation d'une classe abstraite et d'une méthode virtuelle pure
 
 Poursuivons notre réflexion sur les trois classes définies plus haut.  La classe Animal a-t-elle un sens?  Est-elle vraiment utile?
 Y a-t-il une signification concrète à créer des instances d'un "animal générique" n'ayant aucune espèce?  Intuitivement la réponse
-est non.  La classe Animal sert essentiellement de "template" pour construire des classes dérivées, qui elles ont un sens.
+est non.  La classe Animal sert essentiellement de modèle pour construire des classes dérivées, qui elles ont un sens.
 C'est un exemple parfait de classe abstraite.
 
 Nous voudrions donc poursuivre notre démarche et empêcher un programmeur de créer des instances de cette classe.  Par-contre
@@ -159,10 +159,13 @@ virtual int CetteClasse::cetteMethode(int) = 0 ;
 ```
 L'implantation de la méthode virtuelle pure est optionnelle dans la classe de base, mais elle est obligatoire dans toutes les classes dérivées.
 
+### Différence entre virtuelle et virtuelle pure
 
+Attention il y a des différences importantes entre les concepts de méthodes virtuelles et virtuelles pures!
 
+- Une méthode virtuelle permet le polymorphisme: lors de l'exécution du programme, celui-ci choisira adéquatement la version
+à exécuter selon le type d'objet qu'il manipule.  Si la méthode n'est pas implantée dans les classes dérivées, la version de base 
+sera choisie.
 
-
-
-
-
+- Une méthode virtuelle pure permet le polymorphisme et constitue une obligation: son implantation est obligatoire dans les 
+classes dérivées, alors qu'elle est optionnelle dans la classe de base.
