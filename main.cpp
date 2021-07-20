@@ -35,7 +35,7 @@ int main() {
 
     std::cout << "*** Nous allons maintenant appeler la méthode crier() sur un pointeur à Animal qui n'est pas connu d'avance ***" << std::endl ;
     std::cout << "Voici la liste des animaux disponibles.  Choisissez celui que vous voulez entendre" << std::endl ;
-    for (size_t i = 0 ; i < animaux.size(); ++i) std::cout << i << ": " << animaux[i]->getNom() << std::endl ;
+    for (size_t i = 0 ; i < animaux.size(); ++i) std::cout << i << ": " << animaux.at(i)->getNom() << std::endl ;
     std::cout << "Veuillez saisir un numéro: " ;
     int choix = saisirUnEntierPositifAvecLimite(animaux.size()) ;
     Animal* animalChoisi = animaux.at(choix) ;

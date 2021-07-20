@@ -105,11 +105,18 @@ contente d'appeler la version de base, sans se poser de question. Si la méthode
 code permettant de retarder le choix de la bonne version à appeler à l'exécution!  C'est là que se trouve la magie des méthodes
 virtuelles.
 
-Pourquoi voudrait-on accéder à nos instances de manière générique?  N'est-il pas plus simple d'utiliser des objets statiques? 
-Le problème est que les programme dont toutes les conditions d'exécution sont connues d'avance sont rares...  La grande 
+Pourquoi voudrait-on accéder à nos instances de manière générique?  N'est-il pas plus simple d'utiliser des objets statiques?  
+En réalité, c'est le traitement générique qui nous simplifie la vie! 
+
+- Les programmes dont toutes les conditions d'exécution sont connues d'avance sont rares...  La grande 
 majorité des logiciels doit: interagir avec un utilisateur, lire des données d'un fichier, ou encore accéder à un réseau pour lire
 des messages. Par conséquent, on ne sait donc pas d'avance le type d'objet qui devra être manipulé!  Dans ces conditions les méthodes virtuelles
 permettent de manipuler des catégories génériques d'objet sans qu'on sache a priori à quelle classe ils appartiennent.
+
+- Si je veux implanter une nouvelle classe "Ornithorynque", je n'ai qu'à écrire un constructeur, puis à implanter une méthode
+crier() qui produira le comportement attendu.  Cette nouvelle classe est donc implantée avec environ 6 lignes de C++!  En plus, si 
+je veux utiliser cette classe dans mon programme principal, il sera facile de le faire puisque l'appel animalChoisi->crier() sera i
+automatiquement résolu vers la nouvelle classe si le pointeur monAnimal pointe vers une instance de celle-ci!
 
 ## Étape 6 Réalisation d'une classe abstraite et d'une méthode virtuelle pure
 
