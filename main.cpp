@@ -67,4 +67,5 @@ int saisirUnEntierPositifAvecLimite(int limite) {
             std::cout << "Veuillez saisir un nombre entier valide svp!" << std::endl;
         }
     }
+    return valeurRetournee;
 }
