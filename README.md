@@ -93,7 +93,7 @@ n'est pas le même cri suivant l'espèce.
 Différentes catégories de personnages d'un jeu: "guerrier", "clerc" ou "brigand", doivent avoir des comportements communs
 comme: "frapper", "esquiver" ou "lancer un sort",  mais le comportement ne sera pas identique pour chaque type de personnage, on s'attend à ce que 
 "lancer un sort" soit plus spectaculaire pour un clerc que pour un guerrier.  Il y aura donc probablement une classe de base
-"Personnage" contenant des méthode virtuelles comme "frapper" qui seront implantées différemment par les classes dérivées.
+"Personnage" contenant des méthode virtuelles comme "frapper", "esquiver", ou "lancer un sort" qui seront implantées différemment par les classes dérivées.
 
 ### Accès générique
 Ensuite, on veut pouvoir accéder à ces différentes classes dérivées de manière générique: on veut par-exemple accéder aux 
