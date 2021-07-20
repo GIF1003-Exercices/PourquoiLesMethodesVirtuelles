@@ -11,8 +11,8 @@
 class Animal {
 public:
 
-    explicit Animal(std::string) ;
-    std::string getNom() const ;
+    explicit Animal(const std::string&) ;
+    const std::string& getNom() const ;
     std::string crier() const ;  // ATTENTION: C'est cette ligne qui est la plus importante!!!!
 
 private:

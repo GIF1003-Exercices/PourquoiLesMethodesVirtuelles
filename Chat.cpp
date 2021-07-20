@@ -4,7 +4,7 @@
 
 #include "Chat.h"
 
-Chat::Chat(std::string nom) : Animal(nom) {
+Chat::Chat(const std::string& nom) : Animal(nom) {
 
 }
 

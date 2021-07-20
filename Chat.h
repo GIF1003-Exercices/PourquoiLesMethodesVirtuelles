@@ -11,7 +11,7 @@
 class Chat : public Animal {
 
 public:
-    explicit Chat(std::string) ;
+    explicit Chat(const std::string&) ;
 
     std::string crier()    const ;
 };

@@ -10,7 +10,7 @@
 
 class Chien : public Animal {
 public:
-    explicit Chien(std::string) ;
+    explicit Chien(const std::string&) ;
 
    std::string crier() const ;
 };

@@ -10,9 +10,9 @@
  */
 #include "Animal.h"
 
-Animal::Animal(std::string nom) : nom(nom) {}
+Animal::Animal(const std::string& nom) : nom(nom) {}
 
-std::string Animal::getNom() const {
+const std::string& Animal::getNom() const {
     return nom ;
 }
 
