@@ -4,7 +4,7 @@
 
 #include "Chien.h"
 
-Chien::Chien(std::string nom) : Animal(nom) {}
+Chien::Chien(const std::string& nom) : Animal(nom) {}
 
 std::string Chien::crier() const  {
 return "Wouf! wouf!!!" ;
